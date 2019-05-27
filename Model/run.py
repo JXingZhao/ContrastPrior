@@ -33,9 +33,6 @@ def interp_surgery(net, layers):
         net.params[l][0].data[range(m), range(k), :, :] = filt
 
 base_weights = './vgg16_20M.caffemodel'
-#base_weights = '../ResNet-50-model.caffemodel'
-#base_weights = '/opt/snapshot/depth_saliency/rfs/multiply/Pyramid/model_12/_iter_20000.caffemodel'
-#base_weights = '/opt/snapshot/depth_saliency/rfs/multiply/model_2fuse_residual/_iter_5000.caffemodel'
 # init
 caffe.set_mode_gpu()
 caffe.set_device(0)

@@ -5,7 +5,7 @@ import sys
 import cv2
 import logging
 
-caffe_root = '/media/ubuntu/disk/SSD/CODE/caffe/'
+caffe_root = '../caffe/'
 sys.path.insert(0, caffe_root + 'python')
 sys.path.insert(0, caffe_root + '/lib/')
 
@@ -82,7 +82,7 @@ def load_test_data(data_folder, test_lst, mode=1):
     im_folder = data_folder 
     gt_folder = data_folder 
     if mode == 1:
-        sal_folder = data_folder + '/Result_123/'
+        sal_folder = data_folder + '/Result/'
         crf_folder = data_folder + '/crf/' 
         with open(test_lst) as f:
             lines = f.readlines()
@@ -104,8 +104,8 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         print 'Usage: {} iters dataset'.format(sys.argv[0])
 
-    caffemodel = './vgg_pyramid_ablation/final.caffemodel'
-    deploy_file = './vgg_pyramid_ablation/test_full_all2.prototxt'
+    caffemodel = './final.caffemodel'
+    deploy_file = './test.prototxt'
     data_folder = '/media/ubuntu/disk/Dataset/DPFan/Dataset/NJU2K/'
     im_lst, gt_lst, sal_lst,  crf_lst = load_test_data(data_folder, '/media/ubuntu/disk/Dataset/DPFan/Dataset/NJU2K/test.lst')
 
@@ -115,7 +115,6 @@ if __name__ == '__main__':
     
     
     caffe_forward(caffemodel, deploy_file, im_lst, sal_lst, crf_lst)
-    salmetric.do_evaluation(8, sal_lst, gt_lst)
    
 
     crf = False
