@@ -19,7 +19,7 @@ into `$ContrastPrior/Model/`;
 
 
 ### Pretrained models, datasets and results:
-| [Code](https://github.com/JXingZhao/ContrastPrior) |
+| [Page](https://mmcheng.net/jxzhao/) |
 | [Training Set](https://drive.google.com/open?id=1dYjsTiLBsjfamVL0YNfahRx6z1rorm0q)  |
 | [All RGBD Datasets](http://mc.nankai.edu.cn/datasets/rgbd_saliency_datasets.zip)  |
 | [Evaluation results](https://drive.google.com/open?id=17Fmngs0nxF0pEYFGTHAOA2C1akVegwg6)  |
