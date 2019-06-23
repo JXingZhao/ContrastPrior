@@ -1,7 +1,7 @@
 ### For training:
 1. Clone this code by `git clone https://github.com/JXingZhao/ContrastPrior.git --recursive`, assume your source code directory is`$ContrastPrior`;
 
-2. Download [training data](https://drive.google.com/open?id=1dYjsTiLBsjfamVL0YNfahRx6z1rorm0q), and extract it to `$ContrastPrior/data/`;
+2. Download [training data](https://pan.baidu.com/s/1vbKLwNA4dZYKMT8WV2ylrQ) (rmhn), and extract it to `$ContrastPrior/data/`;
 
 3. Build caffe with `cd caffe && mkdir build && cd build && cmake .. && make -j32&& make pycaffe`;
 
