@@ -15,7 +15,7 @@ into `$ContrastPrior/Model/`;
 
 2. Generate saliency maps by `python test.py`; 
 
-3. Run `$ContrastPrior/evaluation/main.m` to evaluate the saliency maps;
+3. Run `$ContrastPrior/evaluation/main.m` to evaluate the saliency maps.
 
 
 ### Pretrained models, datasets and results:
