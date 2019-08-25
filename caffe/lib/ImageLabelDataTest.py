@@ -37,8 +37,8 @@ class ImageLabelDataTest(caffe.Layer):
         if self.train_mode == 0:
             for line in self.indices:
                 impath = line.split()[0][:-4] 
-                self.imglist.append(impath + '.jpg')
-                self.depthlist.append('/depth' + impath[5:] + '.png')
+                self.imglist.append('/test_images/' + impath + '.jpg')
+                self.depthlist.append('/test_depth/' + impath + '.png')
         if self.train_mode == 1:
             for line in self.indices:
                 impath = line.split()[0] 
@@ -166,7 +166,7 @@ class ImageLabelDataTest(caffe.Layer):
         
     def load_depth(self, idx):
         im = cv2.imread(self.root_folder + self.depthlist[self.perm[idx]])
-        
+     #   im = 255 - im
         #print self.root_folder + self.depthlist[self.perm[idx]]
         #print self.root_folder + self.imglist[self.perm[idx]]
         print self.root_folder + self.depthlist[self.perm[idx]]

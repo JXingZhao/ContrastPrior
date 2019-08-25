@@ -10,7 +10,7 @@ layer {
       python_param {
         module: "ImageLabelDataTest"
         layer: "ImageLabelDataTest"
-        param_str: "{\'root_folder\': \'/media/ubuntu/disk/Dataset/DPFan/Dataset/NJU2K/\',\'source\': \'/media/ubuntu/disk/Dataset/DPFan/Dataset/NJU2K/test.lst\',  \'mean\': (119.36,119.36,119.36), \'random\': 0, \'seed\': 1337, \'mirror\': 0, \'new_height\':0, \'new_width\':0}"
+        param_str: "{\'root_folder\': \'../data/NJUD/\',\'source\': \'../data/NJUD/test.lst\',  \'mean\': (119.36,119.36,119.36), \'random\': 0, \'seed\': 1337, \'mirror\': 0, \'new_height\':0, \'new_width\':0}"
      }
      }
 
@@ -551,8 +551,8 @@ layer {
       bottom: 'weight_map_d0_croped'
       top: "pool1_weighted"
       python_param {
-        module: "add_weight3"
-        layer: "addWeight3"
+        module: "add_weight"
+        layer: "addWeight"
      }
      }
 
@@ -595,8 +595,8 @@ layer {
       bottom: 'weight_map_d1_croped'
       top: "pool2_weighted"
       python_param {
-        module: "add_weight3"
-        layer: "addWeight3"
+        module: "add_weight"
+        layer: "addWeight"
      }
      }
 
@@ -643,8 +643,8 @@ layer {
       bottom: 'weight_map_d2_croped'
       top: "res3d_weighted"
       python_param {
-        module: "add_weight3"
-        layer: "addWeight3"
+        module: "add_weight"
+        layer: "addWeight"
      }
      }
 
@@ -694,8 +694,8 @@ layer {
       bottom: 'weight_map_d3_croped'
       top: "res4f_weighted"
       python_param {
-        module: "add_weight3"
-        layer: "addWeight3"
+        module: "add_weight"
+        layer: "addWeight"
      }
      }
 
@@ -749,8 +749,8 @@ layer {
       bottom: 'weight_map_d4_croped'
       top: "res5c_weighted"
       python_param {
-        module: "add_weight3"
-        layer: "addWeight3"
+        module: "add_weight"
+        layer: "addWeight"
      }
      }
 
